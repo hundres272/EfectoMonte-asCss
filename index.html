@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <section class="zoom">
+      <img src="mountain1.png" id="layer1">
+      <img src="mountain2.png" id="layer2">
+      <img src="text.png" id="text">
+    </section>
+    <section class="content">
+      <h1>Texto titulo</h1>
+      <p>lasjdflasjdflasdjfklasjdfasdfasdfasd
+        sadfasdfasdfasdfasdfasdfasdfasdfasdfasd
+        la  sjdflasjdflasdjfklasjdfasdfasdfasd
+        lasjdflasjdflasdjfklasjdfasdfasdfasd
+        lasjdflasjdflasdjfklasjdfasdfasdfasd
+        sadfasdfasdfasdfasdfasdfasdfasdfasdfasd
+        la  sjdflasjdflasdjfklasjdfasdfasdfasd
+        lasjdflasjdflasdjfklasjdfasdfasdfasd
+        lasjdflasjdflasdjfklasjdfasdfasdfasd
+        sadfasdfasdfasdfasdfasdfasdfasdfasdfasd
+        la  sjdflasjdflasdjfklasjdfasdfasdfasd
+        lasjdflasjdflasdjfklasjdfasdfasdfasd
+        lasjdflasjdflasdjfklasjdfasdfasdfasd
+        sadfasdfasdfasdfasdfasdfasdfasdfasdfasd
+        la  sjdflasjdflasdjfklasjdfasdfasdfasd
+        lasjdflasjdflasdjfklasjdfasdfasdfasd
+        lasjdflasjdflasdjfklasjdfasdfasdfasd
+        sadfasdfasdfasdfasdfasdfasdfasdfasdfasd
+        la  sjdflasjdflasdjfklasjdfasdfasdfasd
+        lasjdflasjdflasdjfklasjdfasdfasdfasd
+        lasjdflasjdflasdjfklasjdfasdfasdfasd
+      </p>
+    </section>
+    <script type="text/javascript">
+      var layer1 = document.getElementById('layer1')
+      scroll = window.pageYOffset;
+      document.addEventListener('scroll',function(e){
+        var offset = window.pageYOffset;
+        scroll = offset;
+        layer1.style.width = (100 + scroll/5) + '%';
+      });
+
+      var layer2 = document.getElementById('layer2')
+      scroll = window.pageYOffset;
+      document.addEventListener('scroll',function(e){
+        var offset = window.pageYOffset;
+        scroll = offset;
+        layer2.style.width = (100 + scroll/5) + '%';
+        layer2.style.left = scroll/50 + '%';
+      });
+
+      var text = document.getElementById('text')
+      scroll = window.pageYOffset;
+      document.addEventListener('scroll',function(e){
+        var offset = window.pageYOffset;
+        scroll = offset;
+        text.style.top = - scroll/20 + '%';
+      });
+    </script>
+  </body>
+</html>
